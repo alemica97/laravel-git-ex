@@ -22,7 +22,7 @@
             <td>{{$plate->price}}</td>
             <td>{{$plate->description}}</td>
             <td>{{$plate->category}}</td>
-            <td> <button>Visualizza</button> </td>
+            <td> <button> <a href="{{route('plates.show', $plate->id)}}">Visualizza</a></button> </td>
         </tr>
         @endforeach
     </tbody>
