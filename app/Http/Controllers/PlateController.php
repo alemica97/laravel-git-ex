@@ -45,9 +45,16 @@ class PlateController extends Controller
      * @param  \App\Plate  $plate
      * @return \Illuminate\Http\Response
      */
-    public function show(Plate $plate)
+    public function show($id)
     {
-        //
+        try {
+            $plates = Plate::findOrFail($id);
+        } catch (\Exception $e) {
+           return view('404');
+        }
+
+
+        return view('plates.show', compact('plates'));
     }
 
     /**

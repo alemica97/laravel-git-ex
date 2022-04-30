@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <header> Sono Header </header>
+    <header> <a href="{{route('plates.index')}}">Home</a> </header>
 
     @yield('content')
 
